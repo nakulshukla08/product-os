@@ -1,0 +1,10 @@
+{
+  "index": "Home",
+  "product": "Product",
+  "features": "Features",
+  "architecture": "Architecture",
+  "backlog": "Backlog",
+  "research": "Research",
+  "decisions": "Decisions",
+  "metrics": "Metrics"
+}

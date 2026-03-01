@@ -1,0 +1,19 @@
+# Cited sources for research - URLs, dates, credibility
+# Reference these in research reports for traceability
+
+sources:
+  - id: industry-report-2025
+    title: API Management Market Report 2025
+    url: https://example.com/industry-report
+    date: 2025-01-15
+    type: market-research
+    credibility: high
+    notes: Third-party analyst report
+
+  - id: competitor-pricing-2025
+    title: Competitor Pricing Analysis
+    url: https://example.com/pricing
+    date: 2025-02-01
+    type: competitive-intel
+    credibility: medium
+    notes: Web research, may be outdated

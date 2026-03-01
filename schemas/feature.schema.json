@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Feature",
+  "type": "object",
+  "required": ["id", "name", "status", "priority"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["planned", "in-progress", "shipped", "deprecated"]
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["P0", "P1", "P2", "P3"]
+    },
+    "completion": { "type": "number", "minimum": 0, "maximum": 100 },
+    "repos": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "description": { "type": "string" }
+  }
+}

@@ -1,0 +1,29 @@
+---
+title: "BACKLOG_TITLE"
+category: backlog-item
+status: planned
+priority: P1
+ice:
+  impact: 5
+  confidence: 5
+  ease: 5
+last_updated: YYYY-MM-DD
+---
+
+# BACKLOG_TITLE
+
+## Context
+
+What problem does this solve? What prompted this item?
+
+## ICE Score
+
+- **Impact:** 1-10 — How much will this move the needle?
+- **Confidence:** 1-10 — How sure are we?
+- **Ease:** 1-10 — How easy to ship?
+
+## Acceptance Criteria
+
+- [ ] Criterion 1
+- [ ] Criterion 2
+- [ ] Criterion 3

@@ -1,0 +1,33 @@
+# Prioritized backlog - ordered by ICE score
+# ICE: Impact (1-10), Confidence (1-10), Ease (1-10)
+
+items:
+  - id: bl-001
+    title: Add SSO support for enterprise
+    status: planned
+    priority: P1
+    ice:
+      impact: 8
+      confidence: 7
+      ease: 6
+    description: SAML/OIDC for enterprise customers
+
+  - id: bl-002
+    title: API versioning and deprecation
+    status: planned
+    priority: P1
+    ice:
+      impact: 7
+      confidence: 8
+      ease: 5
+    description: Version APIs and communicate deprecations
+
+  - id: bl-003
+    title: Observability dashboard
+    status: planned
+    priority: P2
+    ice:
+      impact: 6
+      confidence: 6
+      ease: 7
+    description: Unified view of logs, metrics, traces

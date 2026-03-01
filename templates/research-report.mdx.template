@@ -1,0 +1,26 @@
+---
+title: "REPORT_TITLE"
+category: research
+last_updated: YYYY-MM-DD
+sources: []
+---
+
+# REPORT_TITLE
+
+## Summary
+
+Key findings in 2-3 sentences.
+
+## Key Data
+
+- Fact 1 (source: data/research-sources.yaml)
+- Fact 2
+- Fact 3
+
+## Implications
+
+What does this mean for our product strategy?
+
+## Sources
+
+Reference entries from `data/research-sources.yaml` by id.

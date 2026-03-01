@@ -1,0 +1,28 @@
+---
+title: PDR-001 Example Decision
+category: decision
+status: accepted
+last_updated: 2026-03-01
+---
+
+# PDR-001: Example Decision
+
+## Context
+
+We needed to choose a primary database for the platform. Options: PostgreSQL, MySQL, MongoDB.
+
+## Decision
+
+We chose **PostgreSQL** for the primary data store.
+
+## Rationale
+
+- ACID compliance for transactional workflows
+- JSON support for flexible schema where needed
+- Strong ecosystem, team familiarity
+- Managed options (RDS, Supabase) widely available
+
+## Consequences
+
+- Positive: Predictable, well-understood
+- Negative: Less flexible for highly dynamic schemas

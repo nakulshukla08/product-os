@@ -1,0 +1,31 @@
+# Repository map - all repos with purpose and tech stack
+
+repositories:
+  - id: acme-frontend
+    name: acme-frontend
+    purpose: User-facing dashboard and UI
+    tech:
+      - Next.js
+      - React
+      - TypeScript
+    status: active
+    url: https://github.com/acme/acme-frontend
+
+  - id: acme-backend
+    name: acme-backend
+    purpose: API service, business logic, data persistence
+    tech:
+      - Node.js
+      - Express
+      - PostgreSQL
+    status: active
+    url: https://github.com/acme/acme-backend
+
+  - id: acme-worker
+    name: acme-worker
+    purpose: Background jobs, async processing
+    tech:
+      - Node.js
+      - Bull
+    status: active
+    url: https://github.com/acme/acme-worker

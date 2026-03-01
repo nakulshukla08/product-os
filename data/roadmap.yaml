@@ -1,0 +1,18 @@
+# Timeline-based roadmap data
+
+quarters:
+  - id: Q1-2026
+    label: Q1 2026
+    themes:
+      - Ship API Catalog v1
+      - Complete user auth polish
+      - Beta launch
+    status: in-progress
+
+  - id: Q2-2026
+    label: Q2 2026
+    themes:
+      - Observability integration
+      - Team collaboration features
+      - GA launch
+    status: planned
