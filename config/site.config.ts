@@ -8,6 +8,9 @@
  *   - favicon: Optional favicon path
  *   - subscript: Footer text, e.g. "Powered by Product OS" for forks
  *
+ * Repository:
+ *   - repository: GitHub repo URL for "Edit on GitHub", feedback, and project links
+ *
  * Theme:
  *   - colors: primaryHue, primarySaturation, backgroundLight/Dark
  *   - customCSS: Path to extra CSS (e.g. '/theme/override.css' in public/)
@@ -16,6 +19,9 @@
  */
 
 import type { BrandingConfig, ThemeConfig } from '../lib/theme'
+
+/** GitHub repository URL. Used for Edit on GitHub, feedback links, and project icon. */
+export const repository = 'https://github.com/nakulshukla08/product-os'
 
 export const branding: BrandingConfig = {
   productName: 'Product OS',

@@ -1,5 +1,5 @@
 import { Logo } from './components/Logo'
-import { branding, theme } from './config/site.config'
+import { branding, theme, repository } from './config/site.config'
 import { defaultTheme } from './lib/theme'
 
 const colors = { ...defaultTheme, ...theme.colors }
@@ -13,9 +13,9 @@ const config = {
     />
   ),
   project: {
-    link: 'https://github.com/winspect-labs/product-os',
+    link: repository,
   },
-  docsRepositoryBase: 'https://github.com/winspect-labs/product-os',
+  docsRepositoryBase: repository,
   footer: {
     text: `${branding.productName} © ${year} — MIT License`,
     subscript: branding.subscript,
