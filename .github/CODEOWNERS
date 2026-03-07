@@ -1,0 +1,10 @@
+# Code owners are automatically requested for review on PRs that touch these paths.
+# Require their approval by enabling branch protection (see .github/REPOSITORY_SETUP.md).
+
+# Default owner for the entire repository
+* @nakulshukla08
+
+# Optional: assign specific owners to sensitive areas
+# /data/ @nakulshukla08
+# /config/ @nakulshukla08
+# /.github/ @nakulshukla08
