@@ -1,0 +1,46 @@
+name: Documentation feedback
+description: Report unclear, missing, or incorrect documentation
+title: "[Docs]: "
+labels: ["documentation", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us improve the docs. Which page or section needs work?
+  - type: textarea
+    id: location
+    attributes:
+      label: Where?
+      description: Page, section, or file path (e.g. /about-product-os/developer-workflow, README, content/...)
+      placeholder: e.g. /about-product-os/developer-workflow or README.md
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type of feedback
+      options:
+        - Unclear or confusing
+        - Missing information
+        - Incorrect or outdated
+        - Typo or formatting
+        - Suggestion for improvement
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What's wrong? What would make it better?
+      placeholder: |
+        Current text: ...
+        Suggested change: ...
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Your context (optional)
+      description: Your role (engineer, PM, etc.) or use case—helps us tailor the fix
+    validations:
+      required: false
