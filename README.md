@@ -4,6 +4,10 @@ A structured product knowledge base designed for teams that use AI agents alongs
 
 The core idea: product knowledge and code should stay in sync. Agents read Product OS for context before implementing, and update it when code ships. Humans review and make decisions. The repository is the contract between product and engineering.
 
+## Feedback
+
+Found a bug, have a feature idea, or want to improve the docs? [Open an issue](https://github.com/nakulshukla08/product-os/issues/new/choose). We have templates for bug reports, feature requests, and documentation feedback.
+
 ## Documentation
 
 Read on the [generated site](/about-product-os) or on GitHub:

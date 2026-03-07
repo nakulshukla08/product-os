@@ -1,0 +1,61 @@
+name: Bug report
+description: Report something that isn't working correctly
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please search existing issues first to avoid duplicates.
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug. What did you expect vs what actually happened?
+      placeholder: |
+        Expected: ...
+        Actual: ...
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce this?
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. See error
+    validations:
+      required: true
+  - type: dropdown
+    id: context
+    attributes:
+      label: Where does this occur?
+      options:
+        - Generated site (deployed)
+        - Local dev (npm run dev)
+        - Build (npm run build)
+        - Search
+        - Documentation content
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Node version, OS, deployment platform (Vercel, etc.) if relevant
+      placeholder: |
+        - Node: 
+        - OS: 
+        - Deployment:
+    validations:
+      required: false
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Screenshots, error messages, or links that might help
+    validations:
+      required: false
