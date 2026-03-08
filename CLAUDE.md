@@ -14,7 +14,8 @@ Product OS is **built for agents, by agents**. It is the ultimate source of trut
 
 | File | Purpose | Use For |
 |------|---------|---------|
-| `data/features.yaml` | Feature registry with status, priority, completion, goal_ids, links | Feature status reports, gap analysis |
+| `data/features/*.yaml` | Feature registry (per domain) with status, priority, completion, goal_ids, links | Feature status reports, gap analysis |
+| `data/schema.yaml` | Unified schema: entity structures (goals, features, OKRs) + domains | Structure reference for agents |
 | `data/backlog.yaml` | Prioritized backlog with ICE scores, goal_ids, links | What to build next, prioritization |
 | `data/goals.yaml` | Strategic goals (OKRs) with status active/accomplished | Goal tracking, feature/backlog mapping |
 | `data/repositories.yaml` | Repo map, tech stack, ownership | Architecture overview, dependency mapping |
@@ -23,7 +24,7 @@ Product OS is **built for agents, by agents**. It is the ultimate source of trut
 
 ### How to Read Data
 
-1. **Features:** Parse `data/features.yaml` for the full feature list. Each feature has `id`, `name`, `status`, `priority`, `completion`, `repos`, `goal_ids`, `links`.
+1. **Features:** Read `data/schema.yaml` for domain→file mapping, then parse each `data/features/{domain}.yaml` for the full feature list. Each feature has `id`, `name`, `status`, `priority`, `completion`, `repos`, `goal_ids`, `links`.
 2. **Backlog:** Parse `data/backlog.yaml` for ordered items. ICE scores (impact, confidence, ease) indicate priority. Items may have `goal_ids` and `links`.
 3. **Goals:** Parse `data/goals.yaml` for strategic goals. Use `goal_ids` on features/backlog to map work to goals. Mark goals `accomplished` when done.
 3. **Research:** Parse `data/research-sources.yaml` for cited sources. Reference by `id` in research reports.
@@ -31,7 +32,7 @@ Product OS is **built for agents, by agents**. It is the ultimate source of trut
 ## Content Structure
 
 - **Product** — Vision, pitch, value prop, target audience
-- **Features** — Per-feature MDX pages + `data/features.yaml`
+- **Features** — Per-feature MDX pages + `data/features/*.yaml` (per domain)
 - **Architecture** — Repo map, tech stack
 - **Backlog** — Prioritization framework + `data/backlog.yaml` + per-item pages
 - **Research** — Market, competitors, technology (with sources)
@@ -57,7 +58,7 @@ tags: []
 When asked "what should we build next?" or similar:
 
 1. Read `data/backlog.yaml` — items are pre-prioritized by ICE
-2. Read `data/features.yaml` — identify gaps (low completion, blocked features)
+2. Read `data/features/*.yaml` — identify gaps (low completion, blocked features)
 3. Read `content/research/` — market and competitor context
 4. Read `content/decisions/` — past decisions and rationale
 5. Output: Prioritized list with reasoning, referencing specific data

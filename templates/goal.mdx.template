@@ -18,5 +18,5 @@ What does success look like? What are we trying to achieve?
 
 ## Related Work
 
-- Features: (add feature IDs from data/features.yaml)
+- Features: (add feature IDs from data/features/*.yaml)
 - Backlog: (add backlog IDs from data/backlog.yaml)
