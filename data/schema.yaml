@@ -1,0 +1,111 @@
+# Product OS - Unified schema for spec structure
+# Canonical source for agents, validation, and tooling.
+# Defines entity structures and domain model (each domain has many features).
+
+version: "1"
+
+entities:
+  goals:
+    required: [id, title, status]
+    fields:
+      id: { type: string, pattern: "^[a-z0-9-]+$" }
+      title: string
+      status: { enum: [active, accomplished] }
+      description: string
+      target_date: string
+      links:
+        type: array
+        items:
+          required: [label, url]
+          properties:
+            label: string
+            url: string
+
+  features:
+    required: [id, name, status, priority]
+    fields:
+      id: { type: string, pattern: "^[a-z0-9-]+$" }
+      name: string
+      status: { enum: [planned, in-progress, shipped, deprecated] }
+      priority: { enum: [P0, P1, P2, P3] }
+      completion: { type: number, min: 0, max: 100 }
+      repos: { type: array, items: string }
+      description: string
+      goal_ids: { type: array, items: string }
+      links:
+        type: array
+        items:
+          required: [label, url]
+          properties:
+            label: string
+            url: string
+
+  backlog_items:
+    required: [id, title, status, priority]
+    fields:
+      id: string
+      title: string
+      status: string
+      priority: { enum: [P0, P1, P2, P3] }
+      ice:
+        type: object
+        properties:
+          impact: { type: number, min: 1, max: 10 }
+          confidence: { type: number, min: 1, max: 10 }
+          ease: { type: number, min: 1, max: 10 }
+      description: string
+      goal_ids: { type: array, items: string }
+      links:
+        type: array
+        items:
+          required: [label, url]
+          properties:
+            label: string
+            url: string
+
+  okrs:
+    required: [id, objective]
+    fields:
+      id: string
+      objective: string
+      key_results: { type: array, items: string }
+      status: { enum: [draft, active, achieved] }
+      target_date: string
+
+  research_sources:
+    required: [id, title, url]
+    fields:
+      id: string
+      title: string
+      url: string
+      date: string
+      type: string
+      credibility: { enum: [high, medium, low] }
+      notes: string
+
+  repositories:
+    required: [id, name, purpose, status]
+    fields:
+      id: string
+      name: string
+      purpose: string
+      tech: { type: array, items: string }
+      status: string
+      url: string
+
+  roadmap_quarters:
+    required: [id, label, status]
+    fields:
+      id: string
+      label: string
+      themes: { type: array, items: string }
+      status: string
+
+domains:
+  # Each domain has many features; defines file mapping
+  - id: platform
+    file: data/features/platform.yaml
+    description: Core platform, API catalog, infrastructure
+  - id: auth
+    file: data/features/auth.yaml
+    description: Authentication, authorization, SSO
