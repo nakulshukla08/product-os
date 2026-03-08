@@ -1,5 +1,4 @@
-# Feature registry - machine-readable source of truth
-# Used by FeatureTable component and AI agents
+# Platform domain - core platform, API catalog, infrastructure
 
 features:
   - id: api-catalog
@@ -19,16 +18,3 @@ features:
         url: https://jira.example.com/browse/API-123
       - label: Figma
         url: https://figma.com/file/abc
-
-  - id: user-auth
-    name: User Authentication
-    status: shipped
-    priority: P0
-    completion: 100
-    repos:
-      - acme-backend
-      - acme-frontend
-    description: OAuth-based sign-in with GitHub, Google, email/password
-    goal_ids:
-      - platform-foundation
-      - beta-launch

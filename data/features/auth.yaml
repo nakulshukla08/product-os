@@ -1,0 +1,15 @@
+# Auth domain - authentication, authorization, SSO
+
+features:
+  - id: user-auth
+    name: User Authentication
+    status: shipped
+    priority: P0
+    completion: 100
+    repos:
+      - acme-backend
+      - acme-frontend
+    description: OAuth-based sign-in with GitHub, Google, email/password
+    goal_ids:
+      - platform-foundation
+      - beta-launch
