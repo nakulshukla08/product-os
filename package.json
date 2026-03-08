@@ -10,7 +10,9 @@
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
-    "validate": "node scripts/validate.mjs"
+    "validate": "node scripts/validate.mjs",
+    "product-os:create-pr": "node scripts/create-pr.mjs",
+    "product-os:mcp": "node packages/product-os-mcp/dist/index.js"
   },
   "dependencies": {
     "next": "^15.3.4",

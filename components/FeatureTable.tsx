@@ -12,7 +12,7 @@ export function FeatureTable() {
       <DataTable>
         <div className="p-10 text-center">
           <p className="text-sm text-slate-500 dark:text-slate-400">
-            No features in <code className="rounded bg-slate-200/80 dark:bg-slate-700/80 px-1.5 py-0.5">data/features.yaml</code>. Add entries to see them here.
+            No features in <code className="rounded bg-slate-200/80 dark:bg-slate-700/80 px-1.5 py-0.5">data/features/*.yaml</code>. Add entries per domain (see <code>data/schema.yaml</code>).
           </p>
         </div>
       </DataTable>

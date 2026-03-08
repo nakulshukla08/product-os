@@ -4,7 +4,7 @@
 
 Product OS is **agent-first**. We assume most of the work—specification, implementation, status updates—is done by agents. Humans stay aware and review; agents do the heavy lifting.
 
-- **Agents get context** — Read `data/features.yaml`, `data/backlog.yaml`, and content before implementing.
+- **Agents get context** — Read `data/features/*.yaml`, `data/backlog.yaml`, `data/schema.yaml`, and content before implementing.
 - **Agents update** — When code ships, agents update Product OS. No manual drift.
 - **PMs use agents** — Product managers use agents for specification workflow. Enhanced productivity. Code and product definition move closer together.
 
@@ -23,7 +23,7 @@ The gap between product goals/specifications and actual development is where pro
 | Benefit | How Product OS Delivers It |
 |---------|----------------------------|
 | **Context without hunting** | Agents load Product OS automatically. One place for vision, features, architecture, decisions. |
-| **Clear "what to build"** | Agents read `data/backlog.yaml` and `data/features.yaml`. Priorities and status are always current. |
+| **Clear "what to build"** | Agents read `data/backlog.yaml` and `data/features/*.yaml`. Priorities and status are always current. |
 | **No manual updates** | Agents update Product OS when features ship. Engineers review, not maintain. |
 | **Decision history** | PDR/ADR records explain *why*. Agents reference them; humans approve. |
 
@@ -42,7 +42,7 @@ The gap between product goals/specifications and actual development is where pro
 |-------------------|-------------------|
 | Specs drift from code. Manual updates. | Agents update Product OS when they ship. No drift. |
 | PMs manually maintain Jira + Confluence | PMs use agents for specs. Jira augments Product OS. |
-| "Where's the spec?" / "What's the priority?" | Agents read `data/backlog.yaml`, `data/features.yaml`. Always current. |
+| "Where's the spec?" / "What's the priority?" | Agents read `data/backlog.yaml`, `data/features/*.yaml`. Always current. |
 | 5+ tools, no single truth | Product OS is canonical. Tools augment it. |
 
 ## How It Works
