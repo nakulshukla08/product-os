@@ -18,6 +18,16 @@ Read on the [generated site](/about-product-os) or on GitHub:
 - [Agent Workflow](content/about-product-os/agent-workflow.mdx) — Reference for AI agents: principles, data files, update protocol
 - [Agent Rules for Repos](content/about-product-os/rules-for-product-repos.mdx) — Rule content to add to each code repository (Cursor, Claude Code, Windsurf, Copilot, etc.)
 
+## Demo: Pet Store
+
+This repo includes a **pet store demo** to illustrate how Product OS works:
+
+- **Domains**: Catalog (browse pets), Checkout (shopping cart), Inventory (orders)
+- **Features**: Pet Catalog, Shopping Cart, Order Management — each in `data/features/{domain}.yaml`
+- **Data flow**: `data/schema.yaml` defines domains → each domain maps to a feature file → features appear on the [Features](/features) dashboard
+
+All YAML files include `# FORK:` and `# AGENTS:` comments to guide customization and agent behavior. See `data/schema.yaml` for the domain structure.
+
 ## Quick Start
 
 Fork this repo, then:
@@ -36,7 +46,7 @@ Open [http://localhost:3000](http://localhost:3000).
 ```
 product-os/
 ├── content/          # MDX pages (product, features, backlog, research, etc.)
-├── data/             # Machine-readable YAML (features, backlog, repos, sources)
+├── data/             # Machine-readable YAML (schema, features per domain, backlog, goals)
 ├── schemas/          # JSON Schema for validation
 ├── templates/        # Templates for new content
 ├── components/       # Custom MDX components (StatusBadge, FeatureTable, etc.)

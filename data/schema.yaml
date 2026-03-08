@@ -1,6 +1,11 @@
 # Product OS - Unified schema for spec structure
-# Canonical source for agents, validation, and tooling.
-# Defines entity structures and domain model (each domain has many features).
+# ==============================================
+# FORK: Update domains below to match your product. Each domain has many features.
+# AGENTS: Read this file first to find feature file paths. Domain file paths are relative to repo root.
+#
+# Structure:
+#   - entities: field definitions for goals, features, backlog_items, etc.
+#   - domains: list of { id, file, description } — each domain maps to a YAML file under data/features/
 
 version: "1"
 
@@ -101,11 +106,15 @@ entities:
       themes: { type: array, items: string }
       status: string
 
+# FORK: Replace with your product domains. Add/remove domains as needed.
+# AGENTS: Iterate domains, load each file, merge features. Use goal_ids to map features to goals.
 domains:
-  # Each domain has many features; defines file mapping
-  - id: platform
-    file: data/features/platform.yaml
-    description: Core platform, API catalog, infrastructure
-  - id: auth
-    file: data/features/auth.yaml
-    description: Authentication, authorization, SSO
+  - id: catalog
+    file: data/features/catalog.yaml
+    description: Pet catalog, browse and search
+  - id: checkout
+    file: data/features/checkout.yaml
+    description: Shopping cart and checkout
+  - id: inventory
+    file: data/features/inventory.yaml
+    description: Inventory and order management

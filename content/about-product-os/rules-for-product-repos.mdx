@@ -34,7 +34,7 @@ should read it for context and update it when code ships.
 ## Principles
 
 1. **Load Product OS context first** — Before implementing or scoping work, read
-   `data/features.yaml`, `data/backlog.yaml`, and relevant files in `content/`.
+   `data/schema.yaml` (for domain→file mapping), `data/features/*.yaml`, `data/backlog.yaml`, and relevant files in `content/`.
 2. **Align with Product OS** — Do not implement features that are deprecated or
    contradict Product OS. If the user's request conflicts with Product OS, surface
    the conflict and suggest aligning.
@@ -45,7 +45,7 @@ should read it for context and update it when code ships.
 ## Product OS Location
 
 - **Path**: `../product-os` (relative to this repo)
-- **Key files**: `data/features.yaml`, `data/backlog.yaml`, `data/goals.yaml`,
+- **Key files**: `data/schema.yaml`, `data/features/*.yaml`, `data/backlog.yaml`, `data/goals.yaml`,
   `data/repositories.yaml`
 - **Documentation**: See the About Product OS section on the generated site, or
   read `content/about-product-os/` in the repository.
@@ -73,7 +73,7 @@ For Cursor, place this in `.cursor/rules/product-os-maintainer.mdc`. For other t
 
 When editing Product OS data and content:
 
-- When updating `data/features.yaml`, ensure the corresponding file in
+- When updating `data/features/{domain}.yaml`, ensure the corresponding file in
   `content/features/` exists and reflects the current state.
 - When updating `data/backlog.yaml`, consider whether `content/backlog/items/`
   needs a corresponding entry.

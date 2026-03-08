@@ -1,0 +1,55 @@
+---
+title: Pet Store Demo
+category: about-product-os
+last_updated: 2026-03-01
+---
+
+# Pet Store Demo
+
+Product OS ships with a **pet store demo** to show how the data model and workflows fit together. Use it as a template when forking.
+
+## How It Works
+
+### Domain-Based Features
+
+Features are organized by **domain**. Each domain maps to a YAML file:
+
+| Domain | File | Features |
+|--------|------|----------|
+| catalog | `data/features/catalog.yaml` | Pet Catalog |
+| checkout | `data/features/checkout.yaml` | Shopping Cart |
+| inventory | `data/features/inventory.yaml` | Order Management |
+
+The mapping lives in `data/schema.yaml`. Agents and the site load features by iterating domains and merging the results.
+
+### Data Flow
+
+1. **Schema** (`data/schema.yaml`) — Defines domains and their file paths
+2. **Features** (`data/features/*.yaml`) — One file per domain, each with a `features` array
+3. **Goals** (`data/goals.yaml`) — Strategic objectives; features link via `goal_ids`
+4. **Backlog** (`data/backlog.yaml`) — Prioritized work; items link to goals
+5. **Content** (`content/features/*.mdx`) — Narrative specs for each feature
+
+### Fork Instructions in YAML
+
+Every data file includes comments for humans and agents:
+
+- **`# FORK:`** — What to change when customizing for your product
+- **`# AGENTS:`** — When and how agents should update the file
+
+Example from `data/features/catalog.yaml`:
+
+```yaml
+# FORK: Replace with your catalog/listing features. Update ids, names, repos, goal_ids.
+# AGENTS: When shipping catalog-related code, update status and completion here.
+```
+
+### Replacing the Demo
+
+To use Product OS for your own product:
+
+1. Edit `data/schema.yaml` — Replace domains with yours (e.g. `auth`, `billing`, `analytics`)
+2. Create `data/features/{domain}.yaml` for each domain
+3. Update `data/goals.yaml`, `data/backlog.yaml`, `data/repositories.yaml`
+4. Add or replace `content/features/{id}.mdx` pages
+5. Update `config/site.config.ts` for branding

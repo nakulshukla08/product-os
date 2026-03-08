@@ -1,45 +1,53 @@
 # Prioritized backlog - ordered by ICE score
-# ICE: Impact (1-10), Confidence (1-10), Ease (1-10)
+# ==========================================
+# FORK: Replace with your backlog items. Update ids, titles, feature_ids, goal_ids.
+# AGENTS: When you ship an item, set status: shipped. Link items to features via feature_id
+#        (must match an id in data/features/*.yaml). ICE: Impact (1-10), Confidence (1-10), Ease (1-10).
+#
+# Status flow: proposed → approved → in-progress → shipped (or deferred)
 
 items:
   - id: bl-001
-    title: Add SSO support for enterprise
-    status: planned
-    priority: P1
-    ice:
-      impact: 8
-      confidence: 7
-      ease: 6
-    description: SAML/OIDC for enterprise customers
-    goal_ids:
-      - enterprise-readiness
-    links:
-      - label: Jira
-        url: https://jira.example.com/browse/SSO-1
-
-  - id: bl-002
-    title: API versioning and deprecation
+    title: Add pet image gallery with lightbox
     status: planned
     priority: P1
     ice:
       impact: 7
       confidence: 8
-      ease: 5
-    description: Version APIs and communicate deprecations
+      ease: 6
+    description: Show multiple images per pet with zoom and swipe
     goal_ids:
-      - enterprise-readiness
+      - mvp-launch
     links:
-      - label: Linear
-        url: https://linear.app/team/issue/API-42
+      - label: Spec
+        url: /features/pet-catalog
+
+  - id: bl-002
+    title: Guest checkout (no account required)
+    status: planned
+    priority: P1
+    ice:
+      impact: 8
+      confidence: 7
+      ease: 5
+    description: Allow one-time purchase without creating an account
+    goal_ids:
+      - customer-acquisition
+    links:
+      - label: Spec
+        url: /features/shopping-cart
 
   - id: bl-003
-    title: Observability dashboard
+    title: Low-stock notification for admins
     status: planned
     priority: P2
     ice:
       impact: 6
       confidence: 6
       ease: 7
-    description: Unified view of logs, metrics, traces
+    description: Email alert when pet stock falls below threshold
     goal_ids:
-      - enterprise-readiness
+      - operational-scale
+    links:
+      - label: Spec
+        url: /features/order-management

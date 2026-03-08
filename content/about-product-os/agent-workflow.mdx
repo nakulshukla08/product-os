@@ -24,7 +24,8 @@ This page is a reference for AI agents operating in repositories that use Produc
 
 | File | Purpose |
 |------|---------|
-| `data/features.yaml` | Current features, their status, acceptance criteria, and linked repositories |
+| `data/schema.yaml` | Domain→file mapping; read this first to find feature files |
+| `data/features/*.yaml` | Features per domain (e.g. `catalog.yaml`, `checkout.yaml`) with status, priority, completion |
 | `data/backlog.yaml` | Prioritized work items with type, effort, status, and acceptance criteria |
 | `data/goals.yaml` | Strategic goals that features and backlog items map to |
 | `data/repositories.yaml` | Which code repositories implement which features |
@@ -39,7 +40,7 @@ Read `content/decisions/` to check whether a relevant decision has already been 
 
 ### After code ships
 
-1. **`data/features.yaml`** — Set `status: shipped` and `completion: 100` (or the appropriate value for partial completion).
+1. **`data/features/{domain}.yaml`** — Set `status: shipped` and `completion: 100` (or the appropriate value for partial completion). Find the correct file via `data/schema.yaml` domains.
 2. **`data/backlog.yaml`** — Mark the corresponding item as `status: shipped`.
 3. **`content/features/<id>.mdx`** — Update if the implementation diverged from the original specification.
 

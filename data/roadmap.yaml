@@ -1,18 +1,21 @@
 # Timeline-based roadmap data
+# ===========================
+# FORK: Replace with your roadmap quarters and themes.
+# AGENTS: Align roadmap themes with goals and features. Update status as quarters complete.
 
 quarters:
   - id: Q1-2026
     label: Q1 2026
     themes:
-      - Ship API Catalog v1
-      - Complete user auth polish
-      - Beta launch
+      - Ship pet catalog v1
+      - Complete shopping cart polish
+      - MVP launch
     status: in-progress
 
   - id: Q2-2026
     label: Q2 2026
     themes:
-      - Observability integration
-      - Team collaboration features
-      - GA launch
+      - Guest checkout
+      - Order management
+      - Inventory alerts
     status: planned

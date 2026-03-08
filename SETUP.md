@@ -26,7 +26,8 @@ This updates the "Edit on GitHub" links, project icon, and feedback links across
 
 Replace the example data with your product:
 
-- `data/features.yaml` — Your features and status
+- `data/schema.yaml` — Domain→file mapping; define your domains here
+- `data/features/*.yaml` — Features per domain (e.g. `catalog.yaml`, `checkout.yaml`)
 - `data/backlog.yaml` — Your backlog items
 - `data/goals.yaml` — Your strategic goals
 - `data/repositories.yaml` — Your code repositories

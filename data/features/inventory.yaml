@@ -1,0 +1,20 @@
+# Inventory domain - stock and order management
+# =============================================
+# FORK: Replace with your inventory/order features.
+# AGENTS: When shipping inventory code, update this file. Link backlog items via feature_id.
+
+features:
+  - id: order-management
+    name: Order Management
+    status: planned
+    priority: P1
+    completion: 0
+    repos:
+      - petstore-api
+      - petstore-admin
+    description: View orders, update status, low-stock alerts
+    goal_ids:
+      - operational-scale
+    links:
+      - label: Spec
+        url: /features/order-management

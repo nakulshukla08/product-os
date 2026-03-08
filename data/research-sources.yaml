@@ -1,19 +1,22 @@
 # Cited sources for research - URLs, dates, credibility
-# Reference these in research reports for traceability
+# ======================================================
+# FORK: Replace with your research sources. Reference by id in research reports.
+# AGENTS: Before citing a source in content/research/, add it here. Use credibility
+#        (high/medium/low) to indicate reliability.
 
 sources:
-  - id: industry-report-2025
-    title: API Management Market Report 2025
-    url: https://example.com/industry-report
+  - id: pet-industry-2025
+    title: Pet Industry Market Report 2025
+    url: https://example.com/pet-industry-report
     date: 2025-01-15
     type: market-research
     credibility: high
-    notes: Third-party analyst report
+    notes: Third-party analyst report on pet e-commerce growth
 
-  - id: competitor-pricing-2025
-    title: Competitor Pricing Analysis
-    url: https://example.com/pricing
+  - id: competitor-pet-stores
+    title: Competitor Pet Store Analysis
+    url: https://example.com/competitors
     date: 2025-02-01
     type: competitive-intel
     credibility: medium
-    notes: Web research, may be outdated
+    notes: Web research, pricing and feature comparison

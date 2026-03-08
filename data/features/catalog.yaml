@@ -1,0 +1,24 @@
+# Catalog domain - pet browsing and search
+# =========================================
+# FORK: Replace with your catalog/listing features. Update ids, names, repos, goal_ids.
+# AGENTS: When shipping catalog-related code, update status and completion here.
+#        Link to goal_ids from data/goals.yaml. Use repos from data/repositories.yaml.
+
+features:
+  - id: pet-catalog
+    name: Pet Catalog
+    status: in-progress
+    priority: P0
+    completion: 60
+    repos:
+      - petstore-frontend
+      - petstore-api
+    description: Browse and search pets by category, breed, and price
+    goal_ids:
+      - mvp-launch
+      - customer-acquisition
+    links:
+      - label: Figma
+        url: https://figma.com/file/pet-catalog
+      - label: Spec
+        url: /features/pet-catalog

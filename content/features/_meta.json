@@ -1,5 +1,6 @@
 {
   "index": "Dashboard",
-  "api-catalog": "API Catalog",
-  "user-auth": "User Authentication"
+  "pet-catalog": "Pet Catalog",
+  "shopping-cart": "Shopping Cart",
+  "order-management": "Order Management"
 }

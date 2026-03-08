@@ -51,7 +51,7 @@ The fields that matter most:
 | `priority` | `critical`, `high`, `medium`, `low`. Agents respect this when choosing what to work on next. |
 | `status` | `proposed`, `approved`, `in-progress`, `shipped`, `deferred`. The lifecycle of the item. |
 | `acceptance_criteria` | A list of concrete, testable conditions. This is what agents implement against. Vague criteria produce vague implementations. |
-| `feature_id` | Links the item to a feature in `data/features.yaml`. Gives agents the broader context. |
+| `feature_id` | Links the item to a feature in `data/features/*.yaml`. Gives agents the broader context. |
 
 You can add items by editing the file directly, or by asking an agent: *"Add a medium-priority bug to the backlog: the date picker shows the wrong timezone for UTC users. It should respect the user's timezone setting. Link it to the settings feature."*
 
@@ -76,7 +76,7 @@ The distinction between bugs and features matters for triage. Agents can be conf
 
 ### Features
 
-Features live in `data/features.yaml` and represent larger units of work. A feature typically has multiple backlog items associated with it:
+Features live in `data/features/{domain}.yaml` (per domain; see `data/schema.yaml`) and represent larger units of work. A feature typically has multiple backlog items associated with it:
 
 ```yaml
 - id: feat-reports

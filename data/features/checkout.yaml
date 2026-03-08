@@ -1,0 +1,21 @@
+# Checkout domain - shopping cart and payment
+# ===========================================
+# FORK: Replace with your checkout/cart features.
+# AGENTS: When shipping cart or payment code, set status: shipped and completion: 100.
+#        Ensure backlog items in data/backlog.yaml are updated to match.
+
+features:
+  - id: shopping-cart
+    name: Shopping Cart
+    status: shipped
+    priority: P0
+    completion: 100
+    repos:
+      - petstore-frontend
+      - petstore-api
+    description: Add pets to cart, update quantities, remove items
+    goal_ids:
+      - mvp-launch
+    links:
+      - label: Spec
+        url: /features/shopping-cart

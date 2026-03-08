@@ -1,31 +1,35 @@
 # Repository map - all repos with purpose and tech stack
+# =======================================================
+# FORK: Replace with your repositories. Update ids, names, urls. Reference these ids
+#       in data/features/*.yaml under the repos field.
+# AGENTS: When adding a new repo, add it here and link from relevant features.
 
 repositories:
-  - id: acme-frontend
-    name: acme-frontend
-    purpose: User-facing dashboard and UI
+  - id: petstore-frontend
+    name: petstore-frontend
+    purpose: Customer-facing store UI (catalog, cart, checkout)
     tech:
       - Next.js
       - React
       - TypeScript
     status: active
-    url: https://github.com/acme/acme-frontend
+    url: https://github.com/example/petstore-frontend
 
-  - id: acme-backend
-    name: acme-backend
-    purpose: API service, business logic, data persistence
+  - id: petstore-api
+    name: petstore-api
+    purpose: REST API for pets, cart, orders
     tech:
       - Node.js
       - Express
       - PostgreSQL
     status: active
-    url: https://github.com/acme/acme-backend
+    url: https://github.com/example/petstore-api
 
-  - id: acme-worker
-    name: acme-worker
-    purpose: Background jobs, async processing
+  - id: petstore-admin
+    name: petstore-admin
+    purpose: Admin dashboard for inventory and orders
     tech:
+      - React
       - Node.js
-      - Bull
     status: active
-    url: https://github.com/acme/acme-worker
+    url: https://github.com/example/petstore-admin
